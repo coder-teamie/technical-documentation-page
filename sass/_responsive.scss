@@ -1,0 +1,15 @@
+@include desktop {
+}
+
+@include tablet {
+  .grid-container {
+    grid-template-columns: minmax(300px, auto) 1fr;
+    grid-template-areas: 'nav content';
+  }
+  #navbar {
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    background: transparent;
+  }
+}

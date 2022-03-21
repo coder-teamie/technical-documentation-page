@@ -1,0 +1,44 @@
+nav {
+  ul {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 73%;
+  }
+
+  a {
+    display: block;
+    margin-right: 100px;
+
+    a:hover {
+      cursor: pointer;
+      color: red;
+    }
+  }
+
+  li {
+    width: 100%;
+    margin: 0 1.25rem;
+    list-style-type: none;
+  }
+}
+
+#navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 370px;
+  width: 100%;
+  min-width: 250px;
+  border-bottom: 2px solid black;
+  background: white;
+  grid-area: nav;
+
+  ul li:first-child {
+    border-top: 1px solid black;
+  }
+
+  ul li {
+    border-bottom: 1px solid black;
+    padding: 1rem 1rem;
+  }
+}

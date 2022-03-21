@@ -1,0 +1,107 @@
+main {
+  width: 100%;
+  position: relative;
+  margin-top: 5rem;
+
+  padding-left: 2rem;
+  padding-top: 4rem;
+  padding: 0 1rem;
+  grid-area: content;
+
+  h3 {
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .example {
+    li {
+      list-style-type: none;
+      margin-left: 0;
+    }
+  }
+
+  header {
+    margin-left: 0;
+    font-size: 1.5rem;
+  }
+}
+
+.main-section > li {
+  list-style-type: circle;
+  margin-left: 2rem;
+}
+
+section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#Sass_Introduction {
+  .color {
+    padding: 1rem 1rem;
+    width: 100%;
+    background: white;
+  }
+
+  .color-1 {
+    background: #a2b9bc;
+  }
+  .color-2 {
+    background: #b2ad7f;
+  }
+  .color-3 {
+    background: #878f99;
+  }
+
+  .colors {
+    margin-bottom: 2rem;
+  }
+  .comment {
+    color: deeppink;
+  }
+}
+
+code {
+  display: block;
+  text-align: left;
+  word-break: break-all;
+  word-wrap: break-word;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+
+  ul li {
+    padding: 0 0.5rem;
+  }
+}
+
+.sass-link {
+  color: midnightblue;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+// ** NESTING **
+.example {
+  .two {
+    margin-left: 1rem;
+  }
+  .three {
+    margin-left: 2rem;
+  }
+  span {
+    font-weight: 700;
+  }
+}
+
+// ** PARTIALS **
+.partials {
+  letter-spacing: 0.7px;
+  font-weight: 600;
+}
+
+.p-1 {
+  margin-top: 1rem;
+}

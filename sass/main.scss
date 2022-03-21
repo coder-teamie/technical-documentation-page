@@ -1,0 +1,23 @@
+@import './config';
+@import './navigation';
+@import './content';
+
+html {
+  scroll-behavior: smooth;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 300px 1fr;
+  grid-template-areas:
+    'nav'
+    'content';
+}
+
+header {
+  font-size: 1.32rem;
+  margin: 1.875rem 0.9375rem;
+}
+
+@import './responsive';
