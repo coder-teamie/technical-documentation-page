@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="dist/css/main.css" />
-    <title>HTML Documentation Page</title>
+    <title>SASS Documentation Page</title>
   </head>
   <body>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
@@ -49,6 +49,13 @@
       </nav>
 
       <main id="main-doc">
+        <div class="heading-img">
+          <img
+            src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg"
+            alt="sass-logo"
+            class="sass-logo"
+          />
+        </div>
         <!-- INTRODUCTION ✅ -->
         <section class="main-section" id="Sass_Introduction">
           <header>Sass Introduction</header>
@@ -57,19 +64,23 @@
             Before you continue you should have a basic understanding of the
             following:
           </p>
-          <li>HTML</li>
-          <li>CSS</li>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
           <h3>What is Sass?</h3>
-          <li>Sass stands for Syntactically Awesome Stylesheet</li>
-          <li>Sass is an extension to CSS</li>
-          <li>Sass is a CSS pre-processor</li>
-          <li>Sass is completely compatible with all versions of CSS</li>
-          <li>Sass reduces repetition of CSS and therefore saves time</li>
-          <li>
-            Sass was designed by Hampton Catlin and developed by Natalie
-            Weizenbaum in 2006
-          </li>
-          <li>Sass is free to download and use</li>
+          <ul>
+            <li>Sass stands for Syntactically Awesome Stylesheet</li>
+            <li>Sass is an extension to CSS</li>
+            <li>Sass is a CSS pre-processor</li>
+            <li>Sass is completely compatible with all versions of CSS</li>
+            <li>Sass reduces repetition of CSS and therefore saves time</li>
+            <li>
+              Sass was designed by Hampton Catlin and developed by Natalie
+              Weizenbaum in 2006
+            </li>
+            <li>Sass is free to download and use</li>
+          </ul>
           <h3>Why Use Sass?</h3>
           <p>
             Stylesheets are getting larger, more complex, and harder to
@@ -96,26 +107,31 @@
             and write this:
           </p>
           <!-- EXAMPLE -->
-          <article class="example">
-            <h3>Sass Example</h3>
-            <div class="code-example">
-              <code>
-                <ul>
-                  <li>/* define variables for the primary colors */</li>
-                  <li>$primary_1: #a2b9bc;</li>
-                  <li>$primary_2: #b2ad7f;</li>
-                  <li>/* use the variables */</li>
-                  <li>.main-header { background-color: $primary_1; }</li>
-                  <li>.menu-left { background-color: $primary_2; }</li>
-                  <li>.menu-right { background-color: $primary_3; }</li>
-                </ul>
-              </code>
-            </div>
-            <p>
-              So, when using Sass, and the primary color changes, you only need
-              to change it in one place.
-            </p>
-          </article>
+          <h3>Sass Example</h3>
+          <div class="example">
+            <pre>
+            <code>
+            $primary_1: #a2b9bc;
+            $primary_2: #b2ad7f;
+
+            .main-header { 
+              background-color: $primary_1; 
+            }
+
+            .menu-left { 
+              background-color: $primary_2; 
+            }
+
+            .menu-right { 
+              background-color: $primary_3; 
+            }
+            </code>
+            </pre>
+          </div>
+          <p class="p-1">
+            So, when using Sass, and the primary color changes, you only need to
+            change it in one place.
+          </p>
           <!-- end of EXAMPLE -->
           <h3>How Does Sass Work?</h3>
           <p>
@@ -132,8 +148,8 @@
             <li>Sass files has the ".scss" file extension.</li>
             <li>
               Sass supports standard CSS comments
-              <span class="comment">/* comment */</span> , and in addition it
-              supports inline comments <span class="comment">// comment</span>.
+              <span class="special">/* comment */</span> , and in addition it
+              supports inline comments <span class="special">// comment</span>.
             </li>
           </ul>
         </section>
@@ -190,29 +206,39 @@
           </p>
           <div class="example">
             <span>SCSS:</span>
+            <pre>
             <code>
-              <ul>
-                <li>$myFont: Helvetica, sans-serif;</li>
-                <li>$myColor: red;</li>
-
-                <li>section { color: $myColor; }</li>
-                <li>#container { font-family: $myFont;}</li>
-              </ul>
+            $myFont: Helvetica, sans-serif;
+            $myColor: red;
+            
+            section { 
+              color: $myColor; 
+            }
+            #container { 
+              font-family: $myFont;
+            }
             </code>
+            </pre>
           </div>
-          <p>
+          <p class="p-1">
             So, when the Sass file is transpiled, it takes the variables
             (myFont, myColor, etc.) and outputs normal CSS with the variable
             values placed in the CSS, like this:
           </p>
           <div class="example">
             <span>CSS Output:</span>
+            <pre>
             <code>
-              <li>section {color: red;}</li>
-              <li>#container { font-family: Helvetica, sans-serif; }</li>
+            section {
+              color: red;
+            }
+            #container { 
+              font-family: Helvetica, sans-serif; 
+            }
             </code>
+            </pre>
           </div>
-          <p>
+          <p class="p-1">
             When the Sass is processed, it takes the variables we define for the
             $font-stack and $primary-color and outputs normal CSS with our
             variable values placed in the CSS. This can be extremely powerful
@@ -242,37 +268,38 @@
           </p>
           <div class="example">
             <span>SCSS</span>
+            <pre>
             <code>
-              <ul>
-                <li class=>nav {</li>
-                <li class="two">ul {</li>
-                <li class="three">margin: 0;</li>
-                <li class="three">padding: 0;</li>
-                <li class="two">}</li>
-                <li class="two">li { display: inline-block; }</li>
-                <li class="two">a {</li>
-                <li class="three">text-decoration: none;</li>
-                <li class="two">}</li>
-                <li>}</li>
-              </ul>
+            nav {
+              ul {
+                margin: 0;
+                padding: 0;
+              }
+
+              li { display: inline-block; }
+              a {
+                text-decoration: none;
+              }
+            }
             </code>
+            </pre>
           </div>
           <div class="example">
             <span>CSS Output</span>
+            <pre>
             <code>
-              <ul>
-                <li>nav ul {</li>
-                <li class="two">margin: 0;</li>
-                <li class="two">padding: 0;</li>
-                <li>}</li>
-                <li>nav li {</li>
-                <li class="two">display: inline-block;</li>
-                <li>}</li>
-                <li>nav a {</li>
-                <li class="two">text-decoration: none;</li>
-                <li>}</li>
-              </ul>
+            nav ul {
+              margin: 0;
+              padding: 0;
+            }
+            nav li {
+              display: inline-block;
+            }
+            nav a {
+              text-decoration: none;
+            }
             </code>
+            </pre>
           </div>
           <p>
             You'll notice that the ul, li, and a selectors are nested inside the
@@ -295,54 +322,55 @@
           </p>
           <div class="example">
             <span>SCSS</span>
+            <pre>
             <code>
-              <ul>
-                <li>@mixin theme($theme: DarkGray) {</li>
-                  <li class="two">background: $theme;</li>
-                  <li class="two">box-shadow: 0 0 1px rgba($theme, .25);</li>
-                  <li class="two">color: #fff;</li>
-                  <li>}</li>
-                  <li>.info {</li>
-                  <li class="two">@include theme;</li>
-                  <li>}</li>
-                  <li.alert {></li>
-                  <li class="two">@include theme($theme: DarkRed);</li>
-                  <li>}</li>
-                  <li>.success {</li>
-                  <li class="two">@include theme($theme: DarkGreen);</li>
-                  <li>}</li>
-
-              </ul>
+            @mixin theme($theme: DarkGray) {
+              background: $theme;
+              box-shadow: 0 0 1px rgba($theme, .25);
+              color: #fff;
+            }
+            .info {
+              @include theme;
+            }
+            li.alert {
+              @include theme($theme: DarkRed);
+            }
+            .success {
+              @include theme($theme: DarkGreen);
+            }
             </code>
+            </pre>
           </div>
           <div class="example">
             <span>CSS Output</span>
+            <pre>
             <code>
-              <ul>
-                <li>.info {</li>
-                <li class="two">background: DarkGray;</li>
-                <li class="two">box-shadow: 0 0 1px rgba(169, 169, 169, 0.25);</li>
-                <li class="two">color: #fff;</li>
-                <li>}</li>
-                <li>.alert {</li>
-                  <li class="two">background: DarkRed;</li>
-                  <li class="two">box-shadow: 0 0 1px rgba(139, 0, 0, 0.25);</li>
-                  <li class="two">color: #fff;</li>
-                <li>}</li>
-                <li>.success {</li>
-                <li class="two">background: DarkGreen;</li>
-                <li class="two">box-shadow: 0 0 1px rgba(0, 100, 0, 0.25);</li>
-                <li class="two">color: #fff;</li>
-                <li>}</li>
-              </ul>
+            .info {
+              background: DarkGray;
+              box-shadow: 0 0 1px rgba(169, 169, 169, 0.25);
+              color: #fff;
+            }
+            .alert {
+              background: DarkRed;
+              box-shadow: 0 0 1px rgba(139, 0, 0, 0.25);
+              color: #fff;
+            }
+            .success {
+              background: DarkGreen;
+              box-shadow: 0 0 1px rgba(0, 100, 0, 0.25);
+              color: #fff;
+            }
             </code>
+            </pre>
           </div>
           <p>
-            To create a mixin you use the @mixin directive and give it a name.
+            To create a mixin you use the
+            <span class="special">@mixin</span> directive and give it a name.
             We've named our mixin theme. We're also using the variable $theme
             inside the parentheses so we can pass in a theme of whatever we
             want. After you create your mixin, you can then use it as a CSS
-            declaration starting with @include followed by the name of the
+            declaration starting with
+            <span class="special">@include</span> followed by the name of the
             mixin.
           </p>
         </section>
@@ -362,58 +390,57 @@
           </p>
           <div class="example">
             <span>SASS</span>
+            <pre>
             <code>
-              <ul>
-                <li>/* This CSS will print because %message-shared is extended. */</li>
-                <li>%message-shared {</li>
-                <li class="two">border: 1px solid #ccc;</li>
-                <li class="two">padding: 10px;</li>
-                <li class="two">color: #333;</li>
-                <li>}</li>
-                <li>// This CSS won't print because %equal-heights is never extended.</li>
-                <li>%equal-heights {</li>
-                  <li class="two">display: flex;</li>
-                  <li class="two">flex-wrap: wrap;</li>
-                <li>}</li>
-                <li>.message {</li>
-                  <li class="two">@extend %message-shared;</li>
-                <li>}</li>
-                <li>.success {</li>
-                  <li class="two">@extend %message-shared;</li>
-                  <li class="two">border-color: green;</li>
-                <li>}</li>
-                <li>.error {</li>
-                  <li class="two">@extend %message-shared;</li>
-                  <li class="two">border-color: red;</li>
-                <li>}</li>
-                <li>.warning {</li>
-                  <li class="two">@extend %message-shared;</li>
-                  <li class="two">border-color: yellow;</li>
-                <li>}</li>
-              </ul>
+            %message-shared { 
+              border: 1px solid #ccc; 
+              padding: 10px; 
+              color: #333; 
+            } 
+            %equal-heights { 
+              display: flex; 
+              flex-wrap: wrap; 
+            }
+            .message { 
+              @extend %message-shared; 
+            } 
+            .success { 
+              @extend %message-shared; 
+              border-color: green; 
+            } 
+            .error { 
+              @extend %message-shared; 
+              border-color: red; 
+            } 
+            .warning { 
+              @extend %message-shared; 
+              border-color: yellow; 
+            }
             </code>
+            </pre>
           </div>
           <div class="example">
             <span>CSS Output</span>
+            <pre>
             <code>
-              <ul>
-                <li>/* This CSS will print because %message-shared is extended. */</li>
-                <li>.message, .success, .error, .warning {</li>
-                  <li class="two">border: 1px solid #ccc;</li>
-                  <li class="two">padding: 10px;</li>
-                  <li class="two">color: #333;</li>
-                <li>}</li>
-                <li>.success {</li>
-                  <li class="two">border-color: green;</li>
-                <li>}</li>
-                <li>.error {</li>
-                  <li class="two">border-color: red;</li>
-                <li>}</li>
-                <li>.warning {</li>
-                  <li class="two">border-color: yellow;</li>
-                <li>}</li>
-              </ul>
+            .message, 
+            .success, 
+            .error, 
+            .warning { 
+              border: 1px solid #ccc;
+              padding: 10px; color: #333; 
+            } 
+            .success { 
+              border-color: green; 
+            }
+            .error { 
+              border-color: red; 
+            } 
+            .warning { 
+              border-color: yellow; 
+            }
             </code>
+            </pre>
           </div>
           <p class="p-1">
             What the above code does is tells .message, .success, .error, and
@@ -455,7 +482,7 @@
 
         <hr />
 
-        <!-- SASS Modules ✅ -->
+        <!-- SASS MODULES ✅ -->
         <section class="main-section" id="Sass_Modules">
           <header>Sass Modules</header>
           <p>
@@ -468,45 +495,47 @@
           </p>
           <div class="example">
             <span>SCSS</span>
+            <pre>
             <code>
-              <ul>
-                <li>// _base.scss</li>
-                <li>$font-stack: Helvetica, sans-serif;</li>
-                <li>$primary-color: #333;</li>
-                <li>body {</li>
-                  <li class="two">font: 100% $font-stack;</li>
-                  <li class="two">color: $primary-color;</li>
-                  <li>}</li>
-              </ul>
+            *** _base.scss ***
+
+            $font-stack: Helvetica, sans-serif; 
+            $primary-color: #333; 
+            body { 
+              font: 100% $font-stack; 
+              color: $primary-color; 
+            }
             </code>
+            </pre>
           </div>
           <div class="example">
+            <pre>
             <code>
-              <ul>
-                <li>// styles.scss</li>
-                <li>@use 'base';</li>
-                <li>.inverse {</li>
-                  <li class="two">background-color: base.$primary-color;</li>
-                  <li class="two">color: white;</li>
-                  <li>}</li>
-              </ul>
+            *** styles.scss **** 
+            
+            @use 'base'; 
+            
+            .inverse { 
+              background-color: $primary-color; 
+              color: white; 
+            }
             </code>
+            </pre>
           </div>
-
           <div class="example">
             <span>CSS Output</span>
+            <pre>
             <code>
-              <ul>
-                <li>body {</li>
-                  <li class="two">font: 100% Helvetica, sans-serif;</li>
-                  <li class="two">color: #333;</li>
-                  <li>}</li>
-                  <li>.inverse {</li>
-                    <li class="two">background-color: #333;</li>
-                    <li class="two">color: white;</li>
-                    <li>}</li>
-              </ul>
+            body { 
+              font: 100% Helvetica, sans-serif; 
+              color: #333; 
+            } 
+            .inverse {
+              background-color: #333; 
+              color: white; 
+            }
             </code>
+            </pre>
           </div>
           <p>
             Notice we're using @use 'base'; in the styles.scss file. When you
@@ -528,46 +557,66 @@
           </p>
           <div class="example">
             <span>SCSS</span>
+            <pre>
             <code>
-              <ul>
-                <li>@use "sass:math";</li>
-                <li class="p-1">.container {</li>
-                <li class="two">display: flex;</li>
-                <li>}</li>
-                <li>article[role="main"] {</li>
-                <li class="two">width: math.div(600px, 960px) * 100%;</li>
-                <li>}</li>
-                <li>aside[role="complementary"] {</li>
-                  <li class="two">width: math.div(300px, 960px) * 100%;</li>
-                  <li class="two">margin-left: auto;</li>
-                  <li>}</li>
-              </ul>
+            @use "sass:math";
+            
+            .container {
+              display: flex;
+            }
+
+            article[role="main"] {
+              width: math.div(600px, 960px) * 100%;
+            }
+
+            aside[role="complementary"] {
+              width: math.div(300px, 960px) * 100%;
+              margin-left: auto;
+            }
             </code>
+            </pre>
           </div>
           <div class="example">
             <span>CSS Output</span>
+            <pre>
             <code>
-            <ul>
-              <li>.container {</li>
-              <li class="two">.container {</li>
-              <li>}</li>
-              <li>article[role="main"] {</li>
-              <li class="two">width: 62.5%;</li>
-              <li>}</li>
-              <li>aside[role="complementary"] {</li>
-              <li class="two">width: 31.25%;</li>
-              <li class="two">margin-left: auto;</li>
-              <li>}</li>
-            </ul>
+            .container {
+              display: flex;
+            }
+
+            article[role="main"] {
+              width: 62.5%;
+            }
+            
+            aside[role="complementary"] {
+              width: 31.25%;
+              margin-left: auto;
+            }
             </code>
+            </pre>
           </div>
-          <p>We've created a very simple fluid grid, based on 960px. Operations in Sass let us do something like take pixel values and convert them to percentages without much hassle.</p>
+          <p>
+            We've created a very simple fluid grid, based on 960px. Operations
+            in Sass let us do something like take pixel values and convert them
+            to percentages without much hassle.
+          </p>
         </section>
 
         <!-- REFERENCE ✅-->
         <section class="main-section" id="Reference">
           <header>Reference</header>
-          <p>All Documentation from this page was taken from <a href="https://sass-lang.com/guide#topic-6" class="sass-link">Sass: Sass Basics</a> and <a href="https://www.w3schools.com/sass/default.php" class="sass-link">W3Schools</a></p>
+          <p>
+            All Documentation from this page was taken from
+            <a href="https://sass-lang.com/guide#topic-6" class="sass-link"
+              >Sass: Sass Basics</a
+            >
+            and
+            <a
+              href="https://www.w3schools.com/sass/default.php"
+              class="sass-link"
+              >W3Schools</a
+            >
+          </p>
         </section>
       </main>
     </div>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,900;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,900;1,400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +31,7 @@ nav a {
   margin-right: 100px;
 }
 
-nav a a:hover {
+nav a:hover {
   cursor: pointer;
   color: red;
 }
@@ -120,24 +120,19 @@ section {
   margin-bottom: 2rem;
 }
 
-#Sass_Introduction .comment {
+.special {
   color: deeppink;
+  font-weight: 600;
+  font-style: italic;
 }
 
-code {
-  display: block;
+pre {
   text-align: left;
-  word-break: break-all;
-  word-wrap: break-word;
   line-height: 2;
-  background-color: #f7f7f7;
-  padding: 15px;
-  margin: 10px;
-  border-radius: 5px;
-}
-
-code ul li {
-  padding: 0 0.5rem;
+  display: block;
+  margin-left: -5rem;
+  margin-bottom: -3rem;
+  margin-top: -1rem;
 }
 
 .sass-link {
@@ -146,12 +141,11 @@ code ul li {
   text-decoration: underline;
 }
 
-.example .two {
-  margin-left: 1rem;
-}
-
-.example .three {
-  margin-left: 2rem;
+.example {
+  border-radius: 10px;
+  padding: 1rem;
+  background: white;
+  margin-bottom: 1rem;
 }
 
 .example span {
@@ -164,7 +158,11 @@ code ul li {
 }
 
 .p-1 {
-  margin-top: 1rem;
+  margin: 1rem 0;
+}
+
+#Reference {
+  padding-bottom: 5rem;
 }
 
 html {
@@ -175,14 +173,24 @@ html {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 300px 1fr;
-  grid-template-areas:
-    'nav'
-    'content';
+  grid-template-areas: 'nav' 'content';
 }
 
 header {
   font-size: 1.32rem;
   margin: 1.875rem 0.9375rem;
+}
+
+.heading-img {
+  width: 7rem;
+  height: 5rem;
+  margin-bottom: 2rem;
+}
+
+.sass-logo {
+  width: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 814px) {
@@ -195,5 +203,8 @@ header {
     height: 100%;
     position: fixed;
     background: transparent;
+  }
+  .heading-img {
+    margin-top: -3rem;
   }
 }

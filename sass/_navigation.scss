@@ -8,11 +8,10 @@ nav {
   a {
     display: block;
     margin-right: 100px;
-
-    a:hover {
-      cursor: pointer;
-      color: red;
-    }
+  }
+  a:hover {
+    cursor: pointer;
+    color: red;
   }
 
   li {
